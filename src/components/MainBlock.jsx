@@ -1,13 +1,20 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "../style/MainBlock.css"
 import Item from "./Item";
-import item from "./Item";
 import Comment from "./Comment";
 
-const MainBlock = () => {
+
+function MainBlock () {
     const [items, setItems] = useState([])
     const [comments, setComments] = useState([]);
     const [selectedItem, setSelectedItem] = useState(null);
+
+
+
+    // Here I must put some code to save all statements in localstorage, but it was too late to do this
+    //P.s. I also wanted to do this with Redux Persist, but i don't have any practice with it
+
+
 
     const addItem = (title) => {
         const newItem = {
@@ -82,7 +89,7 @@ const MainBlock = () => {
                         }}
                     >
                         <input type="color" name="color" id="html5colorpicker" />
-                        <input type="text" name="text" placeholder="Type some comment..." />
+                        <input type="text" name="text" required="true" placeholder="Type some comment..." />
                         <button type="submit">Add One</button>
                     </form>
                     {selectedItem.comments.map((comment) => (
@@ -97,6 +104,6 @@ const MainBlock = () => {
 
         </div>
     );
-};
+}
 
 export default MainBlock;

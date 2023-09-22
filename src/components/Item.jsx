@@ -2,7 +2,7 @@ import React from 'react';
 
 function Item({ item, onDeleteItem, onSelectItem }) {
     return (
-        <div>
+        <div className="block">
             <h2
                 onClick={() => {
                     onSelectItem(item); // Вызываем onSelectItem при клике на элемент
