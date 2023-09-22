@@ -1,0 +1,13 @@
+.commentsBlock{
+    padding: 10px 40px;
+    width: 25%;
+    height: 20vh;
+    background: #e8e8e8;
+    box-shadow: 4px 4px 10px #232323;
+    margin: 2em 6em 2em 3em;
+    text-align: left;
+}
+#html5colorpicker{
+    width: 3em;
+    height: 3em;
+}

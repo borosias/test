@@ -1,0 +1,11 @@
+.itemsBlock {
+    padding: 20px 40px;
+    width: 25%;
+    background: #e8e8e8;
+    box-shadow: 4px 4px 10px #232323;
+    margin: 2em;
+    text-align: left;
+}
+.itemNameInput {
+    width: 20em;
+}
