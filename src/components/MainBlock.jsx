@@ -37,6 +37,7 @@ function MainBlock() {
     const deleteItem = (itemId) => {
         const updatedItems = items.filter((item) => item.id !== itemId)
         setItems(updatedItems)
+        autoDeleteComments(itemId)
     }
 //<======================================COMMENTS===================================================>
     const addComment = (itemId, text, color) => {
@@ -59,16 +60,13 @@ function MainBlock() {
     };
 
     const deleteComment = (itemId, commentId) => {
-        const itemToUpdate = items.find((item) => item.id === itemId);
-        if (itemToUpdate) {
-            console.log(itemToUpdate)
-            const updatedComments = itemToUpdate.comments.filter(
-                (comment) => comment.id !== commentId
-            );
-            itemToUpdate.comments = updatedComments;
-            setComments(updatedComments);
-            setItems(items[itemId] = itemToUpdate)
-        }
+        const updatedComments = comments.filter((comm) => comm.id !== commentId && comm.itemId !== itemId)
+        setComments(updatedComments)
+    };
+
+    const autoDeleteComments = (itemId) => {
+        const updatedComments = comments.filter((comm) => comm.itemId !== itemId)
+        setComments(updatedComments)
     };
 
     return (
