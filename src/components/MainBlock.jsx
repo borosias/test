@@ -43,6 +43,7 @@ function MainBlock() {
     const addComment = (itemId, text, color) => {
         const itemToUpdate = items.find((item) => item.id === itemId);
         if (itemToUpdate) {
+            console.log(color)
             const newComment = {
                 id: Date.now(),
                 text,
