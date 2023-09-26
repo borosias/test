@@ -5,7 +5,8 @@ function Item({ item, onDeleteItem, onSelectItem }) {
         <div className="block">
             <h2
                 onClick={() => {
-                    onSelectItem(item); // Вызываем onSelectItem при клике на элемент
+                   onSelectItem(item.id); // Вызываем onSelectItem при клике на элемент
+                    console.log(item);
                 }}
             >
                 {item.title}
